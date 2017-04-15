@@ -19,7 +19,7 @@ public class Tela2Activity extends AppCompatActivity {
 
         Cliente cliente = intent.getParcelableExtra("cliente");
         if(cliente != null){
-          String texto = String.format("Nome: %s / Código: %d", cliente.nome, cliente.id);
+          String texto = String.format("Nome: %s / Código: %d", cliente.getNome(), cliente.getId());
             txt.setText(texto);
         }else{
             String nome = intent.getStringExtra("nome");

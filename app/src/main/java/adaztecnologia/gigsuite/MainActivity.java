@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import adaztecnologia.gigsuite.Entity.Cliente;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText editText;
@@ -27,8 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button2 = (Button) findViewById(R.id.btnActivity);
         button2.setOnClickListener(this);
 
-        Button button3 = (Button) findViewById(R.id.btnToast);
-        button3.setOnClickListener(this);
     }
 
     @Override
@@ -45,13 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("nome", "Flávio Maia");
                 intent.putExtra("idade", 35);
                 startActivity(intent);
-                break;
-
-            case R.id.btnParcel:
-                Cliente cliente = new Cliente(1, "Flavio", "32282277", "Musico");
-                Intent intent1 = new Intent(this, Tela2Activity.class);
-                intent1.putExtra("cliente", cliente);
-                startActivity(intent1);
                 break;
         }
 

@@ -1,50 +1,85 @@
 package adaztecnologia.gigsuite.Entity;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+/**
+ * Classe criada para representar o Bean de todos os clientes que irão se cadastrar no aplicativo
+ */
 
-public class Cliente implements Parcelable{
-    public int id;
-    public String nome;
-    public String telefone;
-    public String atividade;
+public class Cliente{
+    private Long id;
+    private String nome;
+    private String telefone;
+    private String descricao;
+    private String categoria;
+    private int avaliacaoPositiva;
+    private int avaliacaoNegativa;
 
-    public Cliente(int id, String nome, String telefone, String atividade){
+
+    //CONSTRUTOR
+    public Cliente(Long id, String nome, String telefone, String descricao, String categoria, int avaliacaoPositiva, int avaliacaoNegativa){
+        this.setId(id);
+        this.setNome(nome);
+        this.setTelefone(telefone);
+        this.setAtividade(descricao);
+        this.setCategoria(categoria);
+        this.setAvaliacaoPositiva(avaliacaoPositiva);
+        this.setAvaliacaoNegativa(avaliacaoNegativa);
+    }
+
+
+    //GETTERS E SETTERS
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
-        this.atividade = atividade;
     }
 
-    private Cliente(Parcel from){
-        id = from.readInt();
-        nome = from.readString();
-        telefone = from.readString();
-        atividade = from.readString();
+    public String getDescricao() {
+        return descricao;
     }
 
-    public static final Parcelable.Creator<Cliente> CREATOR = new Parcelable.Creator<Cliente>(){
-        public Cliente createFromParcel(Parcel in){
-        return new Cliente(in);
+    public void setAtividade(String descricao) {
+        this.descricao = descricao;
     }
 
-
-    public Cliente[] newArray(int size){
-        return new Cliente[size];
-        }
-    };
-
-
-    @Override
-    public int describeContents() {
-        return 0;
+    public String getCategoria() {
+        return categoria;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(id);
-        dest.writeString(nome);
-        dest.writeString(telefone);
-        dest.writeString(atividade);
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public int getAvaliacaoPositiva() {
+        return avaliacaoPositiva;
+    }
+
+    public void setAvaliacaoPositiva(int avaliacaoPositiva) {
+        this.avaliacaoPositiva = avaliacaoPositiva;
+    }
+
+    public int getAvaliacaoNegativa() {
+        return avaliacaoNegativa;
+    }
+
+    public void setAvaliacaoNegativa(int avaliacaoNegativa) {
+        this.avaliacaoNegativa = avaliacaoNegativa;
     }
 }
