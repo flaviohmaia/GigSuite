@@ -1,29 +1,49 @@
 package adaztecnologia.gigsuite;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText = (EditText) findViewById(R.id.editText);
+        Button btnFotografo = (Button) findViewById(R.id.btnfotografo);
+        btnFotografo.setOnClickListener(this);
 
-        Button button = (Button) findViewById(R.id.btnToast);
-        button.setOnClickListener(this);
+        Button btnCinegrafista = (Button) findViewById(R.id.btnCinegafista);
+        btnCinegrafista.setOnClickListener(this);
 
-        Button button2 = (Button) findViewById(R.id.btnActivity);
-        button2.setOnClickListener(this);
+        Button btnMusico = (Button) findViewById(R.id.btnMusico);
+        btnMusico.setOnClickListener(this);
+
+        Button btnRoadie = (Button) findViewById(R.id.btnRoadies);
+        btnRoadie.setOnClickListener(this);
+
+        Button btnIluminacao = (Button) findViewById(R.id.btnIluminacao);
+        btnIluminacao.setOnClickListener(this);
+
+        Button btnPalco = (Button) findViewById(R.id.btnPalcos);
+        btnPalco.setOnClickListener(this);
+
+        Button btnEquipamento = (Button) findViewById(R.id.btnEquipamentos);
+        btnEquipamento.setOnClickListener(this);
+
+        Button btnIngresso = (Button) findViewById(R.id.btnIngressos);
+        btnIngresso.setOnClickListener(this);
+
+        Button btnAtor = (Button) findViewById(R.id.btnAtor);
+        btnIluminacao.setOnClickListener(this);
+
+        Button btnSonorizacao = (Button) findViewById(R.id.btnSonorizacao);
+        btnIluminacao.setOnClickListener(this);
+
+        Button btnProdutor = (Button) findViewById(R.id.btnProdutor);
+        btnIluminacao.setOnClickListener(this);
 
     }
 
@@ -31,16 +51,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view){
 
         switch (view.getId()){
-            case R.id.btnToast:
-                String texto = editText.getText().toString();
-                Toast.makeText(this, texto, Toast.LENGTH_SHORT).show();
+            case R.id.btnCinegafista:
                 break;
 
-            case R.id.btnActivity:
-                Intent intent = new Intent(this, Tela2Activity.class);
-                intent.putExtra("nome", "Flávio Maia");
-                intent.putExtra("idade", 35);
-                startActivity(intent);
+            case R.id.btnfotografo:
+                break;
+
+            case R.id.btnMusico:
+                break;
+
+            case R.id.btnRoadies:
                 break;
         }
 

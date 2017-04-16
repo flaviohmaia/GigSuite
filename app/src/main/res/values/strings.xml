@@ -1,6 +1,14 @@
 <resources>
-    <string name="app_name">GigSuite</string>
-    <string name="btn_toast">Exibir Toast</string>
-    <string name="btn_activity">Outra Activity</string>
-    <string name="btn_parcel">Objetos</string>
+    <string name="app_name">GigSuite - Categorias</string>
+    <string name="btn_fotografo">FOTÓGRAFOS</string>
+    <string name="btn_roadie">ROADIES</string>
+    <string name="btn_palco">PALCOS</string>
+    <string name="btn_musico">MÚSICOS</string>
+    <string name="btn_iluminacao">ILUMINAÇÃO</string>
+    <string name="btn_equipamento">EQUIPAMENTOS</string>
+    <string name="btn_ator">ATOR/ATRIZ</string>
+    <string name="btn_cinegrafista">CINEGRAFISTA</string>
+    <string name="btn_produtor">PRODUTOR</string>
+    <string name="btn_sonorizacao">SONORIZAÇÃO</string>
+    <string name="btn_ingresso">INGRESSOS</string>
 </resources>

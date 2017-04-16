@@ -1,44 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
+    android:background="#1b1b1b"
+    android:orientation="vertical"
     tools:context="adaztecnologia.gigsuite.MainActivity">
 
-    <EditText
+    <!-- LINHA 1 -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:drawableTop="@mipmap/btn_fotografo"
+        android:id="@+id/btnfotografo"
+        android:text="@string/btn_fotografo"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_toast"
-        android:id="@+id/btnToast"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:drawableTop="@mipmap/btn_musico"
+        android:id="@+id/btnMusico"
+        android:text="@string/btn_musico"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_activity"
-        android:id="@+id/btnActivity"
-        android:layout_below="@+id/btnToast"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/btnRoadies"
+        android:drawableTop="@mipmap/btn_roadie"
+        android:text="@string/btn_roadie"/>
+    </LinearLayout>
+
+    <!--LINHA 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_parcel"
-        android:id="@+id/btnParcel"
-        android:layout_below="@+id/btnActivity"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:drawableTop="@mipmap/btn_cinegrafista"
+        android:id="@+id/btnCinegafista"
+        android:text="@string/btn_cinegrafista" android:textSize="12dp"/>
 
-</RelativeLayout>
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:drawableTop="@mipmap/btn_ator"
+        android:id="@+id/btnAtor"
+        android:text="@string/btn_ator"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:drawableTop="@mipmap/btn_equipamento"
+        android:id="@+id/btnEquipamentos"
+        android:text="@string/btn_equipamento" android:textSize="12dp"/>
+    </LinearLayout>
+
+    <!--LINHA 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_iluminacao"
+            android:id="@+id/btnIluminacao"
+            android:text="@string/btn_iluminacao"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_ingresso"
+            android:id="@+id/btnIngressos"
+            android:text="@string/btn_ingresso"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_palco"
+            android:id="@+id/btnPalcos"
+            android:text="@string/btn_palco"/>
+    </LinearLayout>
+
+    <!--LINHA 4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_produtor"
+            android:id="@+id/btnProdutor"
+            android:text="@string/btn_produtor"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_sonorizacao"
+            android:id="@+id/btnSonorizacao"
+            android:text="@string/btn_sonorizacao"/>
+    </LinearLayout>
+</LinearLayout>
+

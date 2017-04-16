@@ -7,12 +7,12 @@ import android.widget.TextView;
 
 import adaztecnologia.gigsuite.Entity.Cliente;
 
-public class Tela2Activity extends AppCompatActivity {
+public class SubCategoriaMusicoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela2);
+        setContentView(R.layout.activity_subCategoriaMusico);
 
         TextView txt = (TextView) findViewById(R.id.txtTexto);
         Intent intent = getIntent();
