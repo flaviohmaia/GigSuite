@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1b1b1b"
-    android:padding="15dp"
+    android:padding="11dp"
     android:orientation="vertical"
     tools:context="com.example.flavi.gigsuite.TelaCadastroActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NOME:"
+        android:text="@string/txtNome"
         android:textColor="#E6E6FA"/>
 
     <EditText
@@ -24,7 +23,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="APELIDO:"
+        android:text="@string/txtApelido"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -37,7 +36,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CPF:"
+        android:text="@string/txtCpf"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -51,7 +50,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="E-MAIL:"
+        android:text="@string/txtEmail"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -65,7 +64,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TELEFONE:"
+        android:text="@string/txtTelefone"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -79,7 +78,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CATEGORIA:"
+        android:text="@string/txtCategoria"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -93,7 +92,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DESCRIÇÃO:"
+        android:text="@string/txtDescricao"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -106,6 +105,32 @@
         android:textSize="10dp"
         android:textStyle="italic"
         android:id="@+id/editDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtUsuario"
+        android:textColor="#E6E6FA"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6E6FA"
+        android:id="@+id/editUsuario"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtSenha"
+        android:textColor="#E6E6FA"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6E6FA"
+        android:id="@+id/editSenha"/>
 
     <Button
         android:layout_width="match_parent"
