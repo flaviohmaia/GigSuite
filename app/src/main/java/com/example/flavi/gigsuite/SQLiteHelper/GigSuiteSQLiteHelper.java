@@ -19,7 +19,6 @@ public class GigSuiteSQLiteHelper extends SQLiteOpenHelper{
     public static final String COLUNA_DESCRICAO = "descricao";
     public static final String COLUNA_CATEGORIA = "categoria";
 
-
     public GigSuiteSQLiteHelper(Context context) {
 
         super(context, NOME_BANCO, null, VERSAO_BANCO);
