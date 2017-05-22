@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GigSuite - Categorias</string>
+    <string name="app_name">GigSuite</string>
     <string name="btn_fotografo">FOTÓGRAFOS</string>
     <string name="btn_roadie">ROADIES</string>
     <string name="btn_palco">PALCOS</string>
@@ -11,4 +11,23 @@
     <string name="btn_produtor">PRODUTOR</string>
     <string name="btn_sonorizacao">SONORIZAÇÃO</string>
     <string name="btn_ingresso">INGRESSOS</string>
+    <string name="btn_outros">OUTROS</string>
+    <string name="btn_cadastrar">CADASTRAR</string>
+
+    <string-array name="categorias">
+        <item>MÚSICO</item>
+        <item>FOTÓGRAFO</item>
+        <item>CINEGRAFISTA</item>
+        <item>ROADIES</item>
+        <item>ATOR/ATRIZ</item>
+        <item>PRODUTOR</item>
+        <item>ILUMINAÇÃO</item>
+        <item>SONORIZAÇÃO</item>
+        <item>INGRESSOS</item>
+        <item>PALCOS</item>
+        <item>INGRESSOS</item>
+        <item>OUTROS</item>
+    </string-array>
+
+    <string name="desc">Faça aqui uma breve descrição sua. Seus equipamentos, principais trabalhos e etc...</string>
 </resources>

@@ -4,35 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
     android:background="#1b1b1b"
+    android:padding="15dp"
     android:orientation="vertical"
-    tools:context="adaztecnologia.gigsuite.MainActivity">
+    tools:context="com.example.flavi.gigsuite.MainActivity">
 
     <!-- LINHA 1 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:drawableTop="@mipmap/btn_fotografo"
-        android:id="@+id/btnfotografo"
-        android:text="@string/btn_fotografo"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_fotografo"
+            android:id="@+id/btnfotografo"
+            android:text="@string/btn_fotografo"/>
 
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:drawableTop="@mipmap/btn_musico"
-        android:id="@+id/btnMusico"
-        android:text="@string/btn_musico"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_musico"
+            android:id="@+id/btnMusico"
+            android:text="@string/btn_musico"/>
 
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:id="@+id/btnRoadies"
-        android:drawableTop="@mipmap/btn_roadie"
-        android:text="@string/btn_roadie"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/btnRoadies"
+            android:drawableTop="@mipmap/btn_roadie"
+            android:text="@string/btn_roadie"/>
     </LinearLayout>
 
     <!--LINHA 2 -->
@@ -40,26 +40,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:drawableTop="@mipmap/btn_cinegrafista"
-        android:id="@+id/btnCinegafista"
-        android:text="@string/btn_cinegrafista" android:textSize="12dp"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_cinegrafista"
+            android:id="@+id/btnCinegafista"
+            android:text="@string/btn_cinegrafista" android:textSize="12dp"/>
 
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:drawableTop="@mipmap/btn_ator"
-        android:id="@+id/btnAtor"
-        android:text="@string/btn_ator"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_ator"
+            android:id="@+id/btnAtor"
+            android:text="@string/btn_ator"/>
 
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:drawableTop="@mipmap/btn_equipamento"
-        android:id="@+id/btnEquipamentos"
-        android:text="@string/btn_equipamento" android:textSize="12dp"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:drawableTop="@mipmap/btn_equipamento"
+            android:id="@+id/btnEquipamentos"
+            android:text="@string/btn_equipamento" android:textSize="12dp"/>
     </LinearLayout>
 
     <!--LINHA 3 -->
@@ -107,6 +107,12 @@
             android:drawableTop="@mipmap/btn_sonorizacao"
             android:id="@+id/btnSonorizacao"
             android:text="@string/btn_sonorizacao"/>
-    </LinearLayout>
-</LinearLayout>
 
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/btnOutros"
+            android:text="@string/btn_outros"/>
+    </LinearLayout>
+
+</LinearLayout>
