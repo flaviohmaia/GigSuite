@@ -41,4 +41,10 @@
     </string-array>
 
     <string name="desc">Faça aqui uma breve descrição sua. Seus equipamentos, principais trabalhos e etc...</string>
+    <string name="title_activity_menu">Gig Suite</string>
+
+    <string name="navigation_drawer_open">Abrir Menu de Navegação</string>
+    <string name="navigation_drawer_close">Fechar Menu de Navegação</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
