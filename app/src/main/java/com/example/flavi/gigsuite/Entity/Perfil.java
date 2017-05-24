@@ -2,32 +2,18 @@ package com.example.flavi.gigsuite.Entity;
 
 import java.io.Serializable;
 
-public class Cliente implements Serializable{
+public class Perfil implements Serializable{
 
     private Long id;
-    private String nome;
     private String apelido;
     private String cpf;
-    private String email;
     private String categoria;
     private String telefone;
     private String descricao;
 
-    public Cliente( Long id, String nome, String apelido, String cpf, String email, String categoria, String telefone, String descricao){
-        this.id = id;
-        this.nome = nome;
-        this.apelido = apelido;
-        this.cpf = cpf;
-        this.email = email;
-        this.categoria = categoria;
-        this.telefone = telefone;
-        this.descricao = descricao;
-    }
-
-    public Cliente(){
+    public Perfil(){
 
     }
-
 
     //GETTERS E SETTERS
     public Long getId() {
@@ -36,14 +22,6 @@ public class Cliente implements Serializable{
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getApelido() {
@@ -60,14 +38,6 @@ public class Cliente implements Serializable{
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getCategoria() {

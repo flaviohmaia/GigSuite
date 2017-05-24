@@ -27,20 +27,56 @@ public class UsuarioDAO {
     }
 
     private long insert(Usuario usuario){
-        return 0;
+        db = helper.getWritableDatabase();
+        cv = new ContentValues();
+
+        cv.put("nome", usuario.getUsuario());
+        cv.put("email", usuario.getUsuario());
+        cv.put("usuario", usuario.getUsuario());
+        cv.put("senha", usuario.getSenha());
+        cv.put("status", true);
+        cv.put("idPerfil", usuario.getPerfil().getId());
+
+        long retorno = db.insert("tb_Usuario", null, cv);
+        db.close();
+
+        return retorno;
     }
 
     private long update(Usuario usuario){
-        return 0;
+        db = helper.getWritableDatabase();
+        cv = new ContentValues();
+
+        String where = "idUsuario = "+usuario.getId();
+
+        cv.put("nome", usuario.getUsuario());
+        cv.put("email", usuario.getUsuario());
+        cv.put("usuario", usuario.getUsuario());
+        cv.put("senha", usuario.getSenha());
+
+        long retorno = db.update("tb_Usuario", cv, where, null);
+        db.close();
+
+        return retorno;
     }
 
     public long save(Usuario usuario){
-        long retorno;
-        return retorno = usuario.getId() == 0 ? insert(usuario) : update(usuario);
+        long retorno = usuario.getId() == 0 ? insert(usuario) : update(usuario);
+        return retorno;
     }
 
     public long delete(Long id){
-        return 0;
+        db = helper.getWritableDatabase();
+        cv = new ContentValues();
+
+        String where = "idUsuario = "+id;
+
+        cv.put("status", false);
+
+        long retorno = db.update("tb_Usuario", cv, where, null);
+        db.close();
+
+        return retorno;
     }
 
     public List<Usuario> select(){

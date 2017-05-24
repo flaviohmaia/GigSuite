@@ -1,144 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#1b1b1b"
-    android:padding="11dp"
-    android:orientation="vertical"
-    tools:context="com.example.flavi.gigsuite.TelaCadastroActivity">
+    android:layout_height="match_parent">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1b1b1b"
+            android:padding="11dp"
+            android:orientation="vertical"
+            tools:context="com.example.flavi.gigsuite.TelaCadastroActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtNome"
-        android:textColor="#E6E6FA"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtNome"
+                android:textColor="#E6E6FA"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:id="@+id/editNome"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E6E6FA"
+                android:id="@+id/editNome" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtApelido"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtEmail"
+                android:textColor="#E6E6FA"
+                android:layout_marginTop="15dp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:id="@+id/editApelido"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6E6FA"
+                android:id="@+id/editEmail"
+                android:inputType="textWebEmailAddress"
+                android:maxLength="50"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtCpf"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtUsuario"
+                android:textColor="#E6E6FA"
+                android:layout_marginTop="15dp"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:inputType="number"
-        android:id="@+id/editCpf"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6E6FA"
+                android:id="@+id/editUsuario"
+                android:maxLength="16"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtEmail"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtSenha"
+                android:textColor="#E6E6FA"
+                android:layout_marginTop="15dp"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:inputType="textEmailAddress"
-        android:id="@+id/editEmail"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6E6FA"
+                android:id="@+id/editSenha"
+                android:inputType="textPassword"
+                android:maxLength="36"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtTelefone"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtSenhaConfirm"
+                android:textColor="#E6E6FA"
+                android:layout_marginTop="15dp"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:inputType="phone"
-        android:id="@+id/editTelefone"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6E6FA"
+                android:id="@+id/editSenhaConfirm"
+                android:inputType="textPassword"
+                android:maxLength="36"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtCategoria"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:background="#32CD32"
+                android:layout_marginTop="15dp"
+                android:id="@+id/btnCadastrar"
+                android:text="@string/btn_cadastrar"/>
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:entries="@array/categorias"
-        android:id="@+id/editCategoria"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtDescricao"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#E6E6FA"
-        android:inputType="textMultiLine"
-        android:hint="@string/desc"
-        android:textSize="10dp"
-        android:textStyle="italic"
-        android:id="@+id/editDescricao"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtUsuario"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:id="@+id/editUsuario"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtSenha"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:id="@+id/editSenha"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:background="#32CD32"
-        android:layout_marginTop="15dp"
-        android:id="@+id/btnCadastrar"
-        android:text="@string/btn_cadastrar"/>
-
-</LinearLayout>
+        </LinearLayout>
+</ScrollView>

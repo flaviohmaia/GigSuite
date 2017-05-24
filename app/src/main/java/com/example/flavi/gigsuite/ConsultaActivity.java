@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-import com.example.flavi.gigsuite.SQLiteHelper.GigSuiteRepositorio;
-import com.example.flavi.gigsuite.SQLiteHelper.GigSuiteSQLiteHelper;
+
 
 public class ConsultaActivity extends AppCompatActivity {
 
@@ -18,15 +17,15 @@ public class ConsultaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulta);
 
-        GigSuiteRepositorio g = new GigSuiteRepositorio(getBaseContext());
-        Cursor cursor = g.carregarDados();
+        //GigSuiteRepositorio g = new GigSuiteRepositorio(getBaseContext());
+        //Cursor cursor = g.carregarDados();
 
-        String[] nomeCampos = new String[]{GigSuiteSQLiteHelper.COLUNA_ID_CLIENTE, GigSuiteSQLiteHelper.COLUNA_NOME};
-        int[] idViews = new int[]{R.id.idCliente, R.id.nomeCliente};
+        //String[] nomeCampos = new String[]{GigSuiteSQLiteHelper.COLUNA_ID_CLIENTE, GigSuiteSQLiteHelper.COLUNA_NOME};
+        //int[] idViews = new int[]{R.id.idCliente, R.id.nomeCliente};
 
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(getBaseContext(), R.layout.activity_consulta, cursor, nomeCampos, idViews, 0);
+        //SimpleCursorAdapter adapter = new SimpleCursorAdapter(getBaseContext(), R.layout.activity_consulta, cursor, nomeCampos, idViews, 0);
 
-        lista = (ListView) findViewById(R.id.listView);
-        lista.setAdapter(adapter);
+        //lista = (ListView) findViewById(R.id.listView);
+        //lista.setAdapter(adapter);
     }
 }

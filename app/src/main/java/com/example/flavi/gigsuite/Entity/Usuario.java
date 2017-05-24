@@ -4,28 +4,24 @@ import java.io.Serializable;
 
 public class Usuario implements Serializable {
 
-    private Long id;
+    private int id;
+    private String nome;
+    private String email;
     private String usuario;
     private String senha;
-    private Cliente cliente;
-
-    public Usuario(Long id, String usuario, String senha, Cliente cliente){
-        this.id = id;
-        this.usuario = usuario;
-        this.senha = senha;
-        this.cliente = cliente;
-    }
+    private String status;
+    private Perfil perfil;
 
     public Usuario(){
-
+        this.perfil = new Perfil();
     }
 
     //GETTERS E SETTERS
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -45,11 +41,35 @@ public class Usuario implements Serializable {
         this.senha = senha;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public String getNome() {
+        return nome;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Perfil getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(Perfil perfil) {
+        this.perfil = perfil;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

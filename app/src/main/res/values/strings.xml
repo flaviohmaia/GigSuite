@@ -19,7 +19,7 @@
     <string name="btn_bateria">BATERISTA</string>
     <string name="btn_piano">TECLADISTA</string>
     <string name="btn_cordas">CORDAS</string>
-    <string name="btn_dj">DJ'S</string>
+    <string name="btn_dj">DJS</string>
     <string name="btn_tecnico">TECNICO DE SOM</string>
     <string name="btn_percussao">PERCUSSIONISTA</string>
     <string name="btn_cantor">CANTOR</string>
@@ -58,4 +58,5 @@
     <string name="navigation_drawer_close">Fechar Menu de Navegação</string>
 
     <string name="action_settings">Configurações</string>
+    <string name="txtSenhaConfirm">CONFIRME SUA SENHA</string>
 </resources>
