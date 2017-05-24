@@ -16,25 +16,25 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_fotografo"
-            android:id="@+id/btnfotografo"
-            android:text="@string/btn_fotografo"/>
+            android:drawableTop="@mipmap/btn_guitarra"
+            android:id="@+id/btnGuitarra"
+            android:text="@string/btn_guitarra"/>
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_musico"
-            android:id="@+id/btnMusico"
-            android:text="@string/btn_musico"/>
+            android:drawableTop="@mipmap/btn_violao"
+            android:id="@+id/btnViolao"
+            android:text="@string/btn_violao"/>
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:id="@+id/btnRoadies"
-            android:drawableTop="@mipmap/btn_roadie"
-            android:text="@string/btn_roadie"/>
+            android:id="@+id/btnBaixo"
+            android:drawableTop="@mipmap/btn_baixo"
+            android:text="@string/btn_baixo"/>
     </LinearLayout>
 
     <!--LINHA 2 -->
@@ -46,25 +46,25 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_cinegrafista"
-            android:id="@+id/btnCinegafista"
-            android:text="@string/btn_cinegrafista" android:textSize="12dp"/>
+            android:drawableTop="@mipmap/btn_bateria"
+            android:id="@+id/btnBateria"
+            android:text="@string/btn_bateria"/>
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_ator"
-            android:id="@+id/btnAtor"
-            android:text="@string/btn_ator"/>
+            android:drawableTop="@mipmap/btn_piano"
+            android:id="@+id/btnPiano"
+            android:text="@string/btn_piano"/>
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_equipamento"
-            android:id="@+id/btnEquipamentos"
-            android:text="@string/btn_equipamento" android:textSize="12dp"/>
+            android:drawableTop="@mipmap/btn_cordas"
+            android:id="@+id/btnCordas"
+            android:text="@string/btn_cordas"/>
     </LinearLayout>
 
     <!--LINHA 3 -->
@@ -76,25 +76,25 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_iluminacao"
-            android:id="@+id/btnIluminacao"
-            android:text="@string/btn_iluminacao"/>
+            android:drawableTop="@mipmap/btn_cantor"
+            android:id="@+id/btnCantor"
+            android:text="@string/btn_cantor"/>
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_ingresso"
-            android:id="@+id/btnIngressos"
-            android:text="@string/btn_ingresso"/>
+            android:drawableTop="@mipmap/btn_metais"
+            android:id="@+id/btnMetais"
+            android:text="@string/btn_metais" android:textSize="12dp"/>
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_palco"
-            android:id="@+id/btnPalcos"
-            android:text="@string/btn_palco"/>
+            android:drawableTop="@mipmap/btn_percussao"
+            android:id="@+id/btnPercussao"
+            android:text="@string/btn_percussao" android:textSize="10dp"/>
     </LinearLayout>
 
     <!--LINHA 4 -->
@@ -106,17 +106,17 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_produtor"
-            android:id="@+id/btnProdutor"
-            android:text="@string/btn_produtor"/>
+            android:drawableTop="@mipmap/btn_tecnico"
+            android:id="@+id/btnTecnico"
+            android:text="@string/btn_tecnico" android:textSize="10dp"/>
 
         <Button
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:drawableTop="@mipmap/btn_sonorizacao"
-            android:id="@+id/btnSonorizacao"
-            android:text="@string/btn_sonorizacao"/>
+            android:drawableTop="@mipmap/btn_dj"
+            android:id="@+id/btnDj"
+            android:text="@string/btn_dj"/>
 
         <Button
             android:layout_weight="1"

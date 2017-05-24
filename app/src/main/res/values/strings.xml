@@ -13,6 +13,17 @@
     <string name="btn_ingresso">INGRESSOS</string>
     <string name="btn_outros">OUTROS</string>
     <string name="btn_cadastrar">CADASTRAR</string>
+    <string name="btn_guitarra">GUITARRISTA</string>
+    <string name="btn_violao">VIOLONISTA</string>
+    <string name="btn_baixo">BAIXISTA</string>
+    <string name="btn_bateria">BATERISTA</string>
+    <string name="btn_piano">TECLADISTA</string>
+    <string name="btn_cordas">CORDAS</string>
+    <string name="btn_dj">DJ'S</string>
+    <string name="btn_tecnico">TECNICO DE SOM</string>
+    <string name="btn_percussao">PERCUSSIONISTA</string>
+    <string name="btn_cantor">CANTOR</string>
+    <string name="btn_metais">METAIS/SOPRO</string>
 
     <string name="txtNome">NOME:</string>
     <string name="txtApelido">APELIDO:</string>
@@ -46,5 +57,5 @@
     <string name="navigation_drawer_open">Abrir Menu de Navegação</string>
     <string name="navigation_drawer_close">Fechar Menu de Navegação</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
 </resources>
