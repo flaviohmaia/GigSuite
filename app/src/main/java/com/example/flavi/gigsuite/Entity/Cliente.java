@@ -13,7 +13,6 @@ public class Cliente implements Serializable{
     private String telefone;
     private String descricao;
 
-
     public Cliente( Long id, String nome, String apelido, String cpf, String email, String categoria, String telefone, String descricao){
         this.id = id;
         this.nome = nome;
@@ -23,6 +22,10 @@ public class Cliente implements Serializable{
         this.categoria = categoria;
         this.telefone = telefone;
         this.descricao = descricao;
+    }
+
+    public Cliente(){
+
     }
 
 
