@@ -9,6 +9,16 @@ public class Usuario implements Serializable {
     private String senha;
     private Cliente cliente;
 
+    public Usuario(Long id, String usuario, String senha, Cliente cliente){
+        this.id = id;
+        this.usuario = usuario;
+        this.senha = senha;
+        this.cliente = cliente;
+    }
+
+    public Usuario(){
+
+    }
 
     //GETTERS E SETTERS
     public Long getId() {
