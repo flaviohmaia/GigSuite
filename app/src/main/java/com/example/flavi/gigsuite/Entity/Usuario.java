@@ -5,15 +5,22 @@ import java.io.Serializable;
 public class Usuario implements Serializable {
 
     private int id;
-    private String nome;
     private String email;
     private String usuario;
     private String senha;
     private String status;
     private Perfil perfil;
 
+    //CONSTRUTORES
     public Usuario(){
         this.perfil = new Perfil();
+    }
+
+    public Usuario(String email, String usuario, String senha, Perfil perfil){
+        this.email = email;
+        this.usuario = usuario;
+        this.senha = senha;
+        this.perfil = perfil;
     }
 
     //GETTERS E SETTERS
@@ -39,14 +46,6 @@ public class Usuario implements Serializable {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getEmail() {
