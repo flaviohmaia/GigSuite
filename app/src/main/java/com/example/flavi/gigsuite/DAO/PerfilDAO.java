@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.flavi.gigsuite.Entity.Perfil;
+import com.example.flavi.gigsuite.Entity.Usuario;
 import com.example.flavi.gigsuite.SQLiteHelper.DatabaseSQLHelper;
 
 import java.util.ArrayList;
@@ -27,26 +28,28 @@ public class PerfilDAO {
     }
 
     private long insert(Perfil perfil){
-        return 0;
+        db = helper.getWritableDatabase();
+        cv = new ContentValues();
+
+        long retorno = db.insert("tb_Perfil", null, cv);
+        db.close();
+        return retorno;
     }
 
     private long update(Perfil perfil){
-        return 0;
+        db = helper.getWritableDatabase();
+        cv = new ContentValues();
+
+        String where = "idPerfil = "+perfil.getId();
+
+
+        long retorno = db.update("tb_Perfil", cv, where, null);
+        db.close();
+        return retorno;
     }
 
     public long save(Perfil perfil){
-        long retorno;
-        return retorno = perfil.getId() == 0 ? insert(perfil) : update(perfil);
+        long retorno = perfil.getId() == 0 ? insert(perfil) : update(perfil);
+        return retorno;
     }
-
-    public long delete(Long id){
-        return 0;
-    }
-
-    public List<Perfil> select(){
-        List<Perfil> users = new ArrayList<Perfil>();
-
-        return users;
-    }
-
 }

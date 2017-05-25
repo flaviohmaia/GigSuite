@@ -8,6 +8,7 @@ public class Perfil implements Serializable{
     private String nome;
     private String apelido;
     private String categoria;
+    private String sub_Categoria;
     private String tipo_Telefone;
     private String telefone;
     private String descricao;
@@ -19,10 +20,12 @@ public class Perfil implements Serializable{
         this.endereco = new Endereco();
     }
 
-    public Perfil(String nome, String apelido, String categoria, String tipo_Telefone, String telefone, String descricao, String site, Endereco endereco){
+    public Perfil(String nome, String apelido, String categoria, String sub_Categoria, String tipo_Telefone, String telefone, String descricao, String site, Endereco endereco){
         this.nome = nome;
         this.apelido = apelido;
         this.categoria = categoria;
+        this.sub_Categoria = sub_Categoria;
+
         this.tipo_Telefone = tipo_Telefone;
         this.telefone = telefone;
         this.descricao = descricao;
@@ -61,6 +64,14 @@ public class Perfil implements Serializable{
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public String getSub_Categoria() {
+        return sub_Categoria;
+    }
+
+    public void setSub_Categoria(String sub_Categoria) {
+        this.sub_Categoria = sub_Categoria;
     }
 
     public String getTipo_Telefone() {

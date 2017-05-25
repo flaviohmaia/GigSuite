@@ -35,6 +35,7 @@ public class DatabaseSQLHelper extends SQLiteOpenHelper {
                     "nome TEXT NOT NULL," +
                     "apelido TEXT NOT NULL," +
                     "categoria TEXT NOT NULL," +
+                    "sub_Categoria TEXT," +
                     "tipo_Telefone TEXT," +
                     "telefone TEXT UNIQUE," +
                     "descricao TEXT," +

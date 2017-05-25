@@ -78,10 +78,4 @@ public class UsuarioDAO {
 
         return retorno;
     }
-
-    public List<Usuario> select(){
-        List<Usuario> users = new ArrayList<Usuario>();
-
-        return users;
-    }
 }
