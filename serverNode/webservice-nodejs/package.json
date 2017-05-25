@@ -1,0 +1,21 @@
+{
+  "name": "webservice-android",
+  "version": "1.0.0",
+  "description": "implementação de webservice para projeto da faculdade 5º periodo ADS - Unibratec",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Nascimento",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "mongoose": "^4.10.2",
+    "node-restful": "^0.2.6"
+  }
+}
