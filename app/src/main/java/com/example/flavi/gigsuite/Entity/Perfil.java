@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Perfil implements Serializable{
 
-    private Long id;
+    private int id;
     private String nome;
     private String apelido;
     private String categoria;
@@ -20,25 +20,12 @@ public class Perfil implements Serializable{
         this.endereco = new Endereco();
     }
 
-    public Perfil(String nome, String apelido, String categoria, String sub_Categoria, String tipo_Telefone, String telefone, String descricao, String site, Endereco endereco){
-        this.nome = nome;
-        this.apelido = apelido;
-        this.categoria = categoria;
-        this.sub_Categoria = sub_Categoria;
-
-        this.tipo_Telefone = tipo_Telefone;
-        this.telefone = telefone;
-        this.descricao = descricao;
-        this.site = site;
-        this.endereco = endereco;
-    }
-
     //GETTERS E SETTERS
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -6,7 +6,9 @@ package com.example.flavi.gigsuite.Entity;
 
 public class Endereco {
 
+    private int id;
     private String cep;
+    private String uf;
     private String logradouro;
     private String bairro;
     private String cidade;
@@ -17,21 +19,29 @@ public class Endereco {
 
     }
 
-    public Endereco(String cep, String logradouro, String bairro, String cidade, String numero){
-        this.cep = cep;
-        this.logradouro = logradouro;
-        this.bairro = bairro;
-        this.cidade = cidade;
-        this.numero = numero;
+    //GETTERS E SETTERS
+    public int getId() {
+        return id;
     }
 
-    //GETTERS E SETTERS
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getCep() {
         return cep;
     }
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
     }
 
     public String getLogradouro() {

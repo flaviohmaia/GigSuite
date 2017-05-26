@@ -30,14 +30,15 @@ public class UsuarioDAO {
         db = helper.getWritableDatabase();
         cv = new ContentValues();
 
-        cv.put("nome", usuario.getUsuario());
-        cv.put("email", usuario.getUsuario());
+        cv.put("email", usuario.getEmail());
         cv.put("usuario", usuario.getUsuario());
         cv.put("senha", usuario.getSenha());
         cv.put("status", true);
+        //TODO: GERAR PERFIL
+        //TODO: GERAR ENDERECO DO PERFIL
         cv.put("idPerfil", usuario.getPerfil().getId());
 
-        long retorno = db.insert("tb_Usuario", null, cv);
+        long retorno = db.insert(DatabaseSQLHelper.TABLE_USUARIO, null, cv);
         db.close();
 
         return retorno;
@@ -49,12 +50,10 @@ public class UsuarioDAO {
 
         String where = "idUsuario = "+usuario.getId();
 
-        cv.put("nome", usuario.getUsuario());
-        cv.put("email", usuario.getUsuario());
-        cv.put("usuario", usuario.getUsuario());
+        cv.put("email", usuario.getEmail());
         cv.put("senha", usuario.getSenha());
 
-        long retorno = db.update("tb_Usuario", cv, where, null);
+        long retorno = db.update(DatabaseSQLHelper.TABLE_USUARIO, cv, where, null);
         db.close();
 
         return retorno;
@@ -73,7 +72,7 @@ public class UsuarioDAO {
 
         cv.put("status", false);
 
-        long retorno = db.update("tb_Usuario", cv, where, null);
+        long retorno = db.update(DatabaseSQLHelper.TABLE_USUARIO, cv, where, null);
         db.close();
 
         return retorno;

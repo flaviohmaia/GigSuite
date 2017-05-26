@@ -13,6 +13,10 @@ public class DatabaseSQLHelper extends SQLiteOpenHelper {
     private static final String NAME_DB = "db_GigSuite";
     private static final int VERSION_DB = 3;
 
+    //Tabelas
+    public static final String TABLE_USUARIO = "tb_Usuario";
+    public static final String TABLE_PERFIL = "tb_Perfil";
+    public static final String TABLE_ENDERECO = "tb_Endereco";
 
     public DatabaseSQLHelper(Context context){
         super(context, NAME_DB, null, VERSION_DB);
@@ -20,38 +24,39 @@ public class DatabaseSQLHelper extends SQLiteOpenHelper {
 
     public String tableUsuario(){
         return "CREATE TABLE tb_Usuario(" +
-                    "idUsuario INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "email TEXT NOT NULL UNIQUE," +
                     "usuario TEXT NOT NULL UNIQUE," +
                     "senha TEXT NOT NULL," +
                     "status BOOLEAN NOT NULL," +
-                    "idPerfil INTEGER," +
-                    "CONSTRAINT FK_idPefil FOREIGN KEY (idPerfil) REFERENCES tb_Perfil (idPerfil)" +
+                    "FK_Perfil INTEGER," +
+                    "CONSTRAINT FK_Perfil FOREIGN KEY (FK_Perfil) REFERENCES tb_Perfil (id)" +
                 ");";
     }
     public String tablePerfil(){
         return  "CREATE TABLE tb_Perfil(" +
-                    "idPefil INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "nome TEXT NOT NULL," +
                     "apelido TEXT NOT NULL," +
                     "categoria TEXT NOT NULL," +
                     "sub_Categoria TEXT," +
-                    "tipo_Telefone TEXT," +
-                    "telefone TEXT UNIQUE," +
+                    "tipo_Telefone TEXT NOT NULL," +
+                    "telefone TEXT NOT NULL," +
                     "descricao TEXT," +
                     "site TEXT," +
-                    "idEndereco INTEGER," +
-                    "CONSTRAINT FK_idEndereco FOREIGN KEY (idEndereco) REFERENCES tb_Enderco (idEndereco)" +
+                    "FK_Endereco INTEGER," +
+                    "CONSTRAINT FK_Endereco FOREIGN KEY (FK_Endereco) REFERENCES tb_Endereco (id)" +
                 ");";
     }
     public String tableEndereco(){
-        return  "CREATE TABLE tb_Perfil(" +
-                    "idEndereco INTEGER PRIMARY KEY AUTOINCREMENT," +
+        return  "CREATE TABLE tb_Endereco(" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "logradouro TEXT NOT NULL," +
-                    "numero TEXT," +
-                    "bairo TEXT," +
+                    "numero TEXT NOT NULL," +
+                    "bairro TEXT NOT NULL," +
                     "cidade TEXT NOT NULL," +
-                    "uf TEXT NOT NULL" +
+                    "uf TEXT NOT NULL," +
+                    "cep TEXT NOT NULL" +
                 ");";
     }
 

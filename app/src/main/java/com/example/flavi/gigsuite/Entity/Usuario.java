@@ -16,13 +16,6 @@ public class Usuario implements Serializable {
         this.perfil = new Perfil();
     }
 
-    public Usuario(String email, String usuario, String senha, Perfil perfil){
-        this.email = email;
-        this.usuario = usuario;
-        this.senha = senha;
-        this.perfil = perfil;
-    }
-
     //GETTERS E SETTERS
     public int getId() {
         return id;
