@@ -6,7 +6,7 @@
     android:background="#1b1b1b"
     android:padding="11dp"
     android:orientation="vertical"
-    tools:context="com.example.flavi.gigsuite.TelaCadastroActivity">
+    tools:context="com.example.flavi.gigsuite.TelaEndereco">
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txtEmail"
+        android:text="@string/txtLogradouro"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp" />
 
@@ -26,14 +26,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#E6E6FA"
-        android:id="@+id/editEmail"
-        android:inputType="textWebEmailAddress"
-        android:maxLength="50"/>
+        android:id="@+id/editLogradouro" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txtUsuario"
+        android:text="@string/txtNumero"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -41,13 +39,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#E6E6FA"
-        android:id="@+id/editUsuario"
-        android:maxLength="16"/>
+        android:id="@+id/editNumero" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txtCategoria"
+        android:text="@string/txtBairro"
+        android:textColor="#E6E6FA"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6E6FA"
+        android:id="@+id/editBairro" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtCidade"
+        android:textColor="#E6E6FA"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6E6FA"
+        android:id="@+id/editCidade" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtUf"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -56,44 +79,13 @@
         android:layout_height="wrap_content"
         android:background="#E6E6FA"
         android:entries="@array/categorias"
-        android:id="@+id/editCategoria"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtSubCategoria"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:entries="@array/subcategorias"
-        android:id="@+id/editSubCategoria"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtDescricao"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#E6E6FA"
-        android:inputType="textMultiLine"
-        android:hint="@string/desc"
-        android:textSize="10dp"
-        android:textStyle="italic"
-        android:id="@+id/editDescricao"/>
+        android:id="@+id/editUf"/>
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txtSenha"
+        android:text="@string/txtCep"
         android:textColor="#E6E6FA"
         android:layout_marginTop="15dp"/>
 
@@ -101,24 +93,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#E6E6FA"
-        android:id="@+id/editSenha"
-        android:inputType="textPassword"
-        android:maxLength="36"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtSenhaConfirm"
-        android:textColor="#E6E6FA"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E6E6FA"
-        android:id="@+id/editSenhaConfirm"
-        android:inputType="textPassword"
-        android:maxLength="36"/>
+        android:id="@+id/editCep" />
 
     <Button
         android:layout_width="match_parent"

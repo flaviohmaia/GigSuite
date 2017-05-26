@@ -1,29 +1,8 @@
 <resources>
     <string name="app_name">GigSuite</string>
-    <string name="btn_fotografo">FOTÓGRAFOS</string>
-    <string name="btn_roadie">ROADIES</string>
-    <string name="btn_palco">PALCOS</string>
-    <string name="btn_musico">MÚSICOS</string>
-    <string name="btn_iluminacao">ILUMINAÇÃO</string>
-    <string name="btn_equipamento">EQUIPAMENTOS</string>
-    <string name="btn_ator">ATOR/ATRIZ</string>
-    <string name="btn_cinegrafista">CINEGRAFISTA</string>
-    <string name="btn_produtor">PRODUTOR</string>
-    <string name="btn_sonorizacao">SONORIZAÇÃO</string>
-    <string name="btn_ingresso">INGRESSOS</string>
-    <string name="btn_outros">OUTROS</string>
-    <string name="btn_cadastrar">CADASTRAR</string>
-    <string name="btn_guitarra">GUITARRISTA</string>
-    <string name="btn_violao">VIOLONISTA</string>
-    <string name="btn_baixo">BAIXISTA</string>
-    <string name="btn_bateria">BATERISTA</string>
-    <string name="btn_piano">TECLADISTA</string>
-    <string name="btn_cordas">CORDAS</string>
-    <string name="btn_dj">DJS</string>
-    <string name="btn_tecnico">TECNICO DE SOM</string>
-    <string name="btn_percussao">PERCUSSIONISTA</string>
-    <string name="btn_cantor">CANTOR</string>
-    <string name="btn_metais">METAIS/SOPRO</string>
+
+    <string name="txtCadastrar">CADASTRAR</string>
+    <string name="txtBuscar">BUSCAR</string>
 
     <string name="txtNome">NOME:</string>
     <string name="txtApelido">APELIDO:</string>
@@ -34,6 +13,19 @@
     <string name="txtCpf">CPF:</string>
     <string name="txtUsuario">* USUÁRIO:</string>
     <string name="txtSenha">* SENHA:</string>
+    <string name="txtSubCategoria">SUBCATEGORIA</string>
+
+    <string name="txtLogradouro">LOGRADOURO</string>
+    <string name="txtNumero">NUMERO</string>
+    <string name="txtBairro">BAIRRO</string>
+    <string name="txtCidade">CIDADE</string>
+    <string name="txtUf">UF</string>
+    <string name="txtCep">CEP</string>
+
+    <string name="txtTermoUso">TERMOS DE USO</string>
+    <string name="txtPerfil">PERFIL</string>
+    <string name="txtFaleConosco">FALE CONOSCO</string>
+    <string name="txtContato">CONTATO</string>
 
 
     <string-array name="categorias">
@@ -49,6 +41,52 @@
         <item>PALCOS</item>
         <item>INGRESSOS</item>
         <item>OUTROS</item>
+    </string-array>
+
+    <string-array name="subcategorias">
+        <item>GITARRISTA</item>
+        <item>VIOLONISTA</item>
+        <item>BAIXISTA</item>
+        <item>BATERISTA</item>
+        <item>TECLADISTA</item>
+        <item>PERCUSSIONISTA</item>
+        <item>CANTOR</item>
+        <item>CORDAS</item>
+        <item>TÉCNICO DE SOM</item>
+        <item>METAIS E SOPRO</item>
+        <item>DJ</item>
+        <item>OUTROS</item>
+    </string-array>
+
+    <string-array name="uf">
+        <item/>
+        <item>Acre</item>
+        <item>Alagoas</item>
+        <item>Amazonas</item>
+        <item>Amapá</item>
+        <item>Bahia</item>
+        <item>Ceará</item>
+        <item>Destrito Federal</item>
+        <item>Espirito Santo</item>
+        <item>Goiás</item>
+        <item>Manaus</item>
+        <item>Minas Gerais</item>
+        <item>Mato Grosso do Sul</item>
+        <item>Mato Grosso</item>
+        <item>Pará</item>
+        <item>Paraíba</item>
+        <item>Pernambuco</item>
+        <item>Piauí</item>
+        <item>Paraná</item>
+        <item>Rio de Janeiro</item>
+        <item>Rio Grande do Norte</item>
+        <item>Rondônia</item>
+        <item>Roraima</item>
+        <item>Rio Grande do Sul</item>
+        <item>Santa Catarina</item>
+        <item>Sergipe</item>
+        <item>São Paulo</item>
+        <item>Tocantins</item>
     </string-array>
 
     <string name="desc">Faça aqui uma breve descrição sua. Seus equipamentos, principais trabalhos e etc...</string>
