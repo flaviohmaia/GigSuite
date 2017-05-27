@@ -1,4 +1,4 @@
-package com.example.flavi.gigsuite.NetworkChecking;
+package com.example.flavi.gigsuite.Utils;
 
 import android.app.Activity;
 import android.net.ConnectivityManager;
