@@ -3,6 +3,7 @@
 
     <string name="txtCadastrar">CADASTRAR</string>
     <string name="txtBuscar">BUSCAR</string>
+    <string name="txtEntrar">ENTRAR</string>
 
     <string name="txtNome">NOME:</string>
     <string name="txtApelido">APELIDO:</string>
@@ -58,7 +59,7 @@
     </string-array>
 
     <string-array name="uf">
-        <item/>
+        <item />
         <item>Acre</item>
         <item>Alagoas</item>
         <item>Amazonas</item>

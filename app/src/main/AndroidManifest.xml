@@ -23,7 +23,8 @@
         <activity android:name=".TelaCadastroActivity" />
         <activity android:name=".ConsultaActivity" />
         <activity android:name=".CadastroInicialActivity" />
-        <activity android:name=".TelaEndereco"></activity>
+        <activity android:name=".TelaEndereco" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
