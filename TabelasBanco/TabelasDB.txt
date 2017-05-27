@@ -1,0 +1,33 @@
+CREATE TABLE tb_Endereco(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    logradouro VARCHAR(30) NOT NULL,
+    numero VARCHAR(8) NOT NULL,
+    bairro VARCHAR(20) NOT NULL,
+    cidade VARCHAR(20) NOT NULL,
+    uf CHAR(2) NOT NULL,
+    cep CHAR(8) NOT NULL
+);
+
+CREATE TABLE tb_Perfil(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(40) NOT NULL,
+    apelido VARCHAR(20) NOT NULL,
+    categoria VARCHAR(20) NOT NULL,
+    sub_Categoria VARCHAR(20),
+    tipo_Telefone VARCHAR(10) NOT NULL,
+    telefone CHAR(11) NOT NULL,
+    descricao VARCHAR(255),
+    site VARCHAR(100),
+    FK_Endereco INTEGER,
+    CONSTRAINT FK_Endereco FOREIGN KEY (FK_Endereco) REFERENCES tb_Endereco (id)
+);
+
+CREATE TABLE tb_Usuario(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(40) NOT NULL UNIQUE,
+    usuario VARCHAR(20) NOT NULL UNIQUE,
+    senha CHAR(36) NOT NULL,
+    status BOOLEAN NOT NULL,
+    FK_Perfil INTEGER,
+    CONSTRAINT FK_Perfil FOREIGN KEY (FK_Perfil) REFERENCES tb_Perfil (id)
+);

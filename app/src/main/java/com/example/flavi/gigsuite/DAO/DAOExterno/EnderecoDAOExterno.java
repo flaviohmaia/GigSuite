@@ -5,4 +5,8 @@ package com.example.flavi.gigsuite.DAO.DAOExterno;
  */
 
 public class EnderecoDAOExterno {
+
+    //TODO: FAZER INSERT QUE CADASTRA O PRIMEIRO ENDERECO BASEADO NO USUARIO
+    //TODO: FAZER UPDATE - METODO QUE VAI SER SEMPRE UTILIZADO
+
 }
