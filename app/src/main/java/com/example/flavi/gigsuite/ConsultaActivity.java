@@ -1,14 +1,16 @@
 package com.example.flavi.gigsuite;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import com.example.flavi.gigsuite.Entity.Perfil;
 
 
-public class ConsultaActivity extends AppCompatActivity {
+public class ConsultaActivity extends AppCompatActivity implements ListagemFragment.AoClicarNoPerfil {
 
     private ListView lista;
 
@@ -27,5 +29,13 @@ public class ConsultaActivity extends AppCompatActivity {
 
         //lista = (ListView) findViewById(R.id.listView);
         //lista.setAdapter(adapter);
+    }
+
+
+    @Override
+    public void clicouNoPerfil(Perfil perfil) {
+        Intent intent = new Intent(this, ConsultaDetalheActivity.class);
+        intent.putExtra(ConsultaDetalheActivity.EXTRA_PERFIL, perfil);
+        startActivity(intent);
     }
 }

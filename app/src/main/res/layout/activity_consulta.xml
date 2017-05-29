@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.example.flavi.gigsuite.ListFragment"
+        android:name="com.example.flavi.gigsuite.ListagemFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
