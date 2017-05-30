@@ -25,7 +25,8 @@
         <activity android:name=".CadastroInicialActivity" />
         <activity android:name=".TelaEndereco" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".ConsultaDetalheActivity"></activity>
+        <activity android:name=".ConsultaDetalheActivity" />
+        <activity android:name=".HistoryActivity"></activity>
     </application>
 
 </manifest>

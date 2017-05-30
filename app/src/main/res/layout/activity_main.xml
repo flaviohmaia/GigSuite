@@ -100,6 +100,21 @@
             android:text="@string/txtBuscar"
             android:textSize="20dp"/>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_gravity="end|bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:background="#32CD32"
+                android:layout_marginTop="15dp"
+                android:id="@+id/btnHistorico"
+                android:text="@string/txtHistorico"
+                />
+        </FrameLayout>
+
     </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>

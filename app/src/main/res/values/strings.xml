@@ -100,4 +100,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtHistorico">Histórico</string>
+    <string name="title_activity_history">Histórico de Busca</string>
+    <string name="text_bt_newUsers">Selecionar</string>
 </resources>

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.flavi.gigsuite.NetworkChecking.InternetCheck;
+import com.example.flavi.gigsuite.Utils.InternetCheck;
 
 
 public class TelaCadastroActivity extends AppCompatActivity {

@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseSQLHelper extends SQLiteOpenHelper {
 
     private static final String NAME_DB = "db_GigSuite";
-    private static final int VERSION_DB = 4;
+    private static final int VERSION_DB = 12;
 
     //Tabelas
     public static final String TABLE_Historico = "tb_Historico";
@@ -23,7 +23,10 @@ public class DatabaseSQLHelper extends SQLiteOpenHelper {
     public String tableHistorico(){
         return  "CREATE TABLE tb_Historico(" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "itemPesquisa TEXT" +
+                    "categoria TEXT," +
+                    "sub_Categoria TEXT," +
+                    "uf TEXT," +
+                    "cidade TEXT" +
                 ");";
     }
 
