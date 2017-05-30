@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseSQLHelper extends SQLiteOpenHelper {
 
     private static final String NAME_DB = "db_GigSuite";
-    private static final int VERSION_DB = 12;
+    private static final int VERSION_DB = 13;
 
     //Tabelas
     public static final String TABLE_Historico = "tb_Historico";
