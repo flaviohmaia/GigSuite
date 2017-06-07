@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,9 +18,26 @@ import android.widget.Toast;
 
 import com.example.flavi.gigsuite.DAO.Historico.HistoricoDAO;
 import com.example.flavi.gigsuite.Entity.Historico.Historico;
+import com.example.flavi.gigsuite.Entity.Usuario;
+import com.example.flavi.gigsuite.Entity.UsuarioDeserializer;
+import com.example.flavi.gigsuite.retrofit2.UsuarioService;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity
-            implements NavigationView.OnNavigationItemSelectedListener{
+            implements NavigationView.OnNavigationItemSelectedListener {
+
+    //Colocar o IP do notebook de vcs
+    //Tem que startar o projeto no node e o mongodb
+    private static final String BASE_URL = "http://192.168.1.105:8080/api/";
 
     Button btnBuscar;
     Button  btnHistory;
@@ -49,6 +67,43 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*=========================================================*/
+
+        //TODO: FALTA JOGAR ESSA PORRA EM UM LISTVIEW
+        Gson g = new GsonBuilder().registerTypeAdapter(Usuario.class, new UsuarioDeserializer()).create();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create(g))
+                .build();
+
+
+        UsuarioService service = retrofit.create(UsuarioService.class);
+        Call<List<Usuario>> usuarios  = service.getUsuarios();
+
+        usuarios.enqueue(new Callback<List<Usuario>>() {
+            @Override
+            public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
+                if(response.isSuccessful()){
+                    List<Usuario> users = response.body();
+                    for(Usuario u : users){
+                        Log.i("USER", u.getUsuario()+" -- "+u.getSenha()+" -- "+u.getEndereco().getCidade());
+                        Log.i("USER", "---------------------------");
+                    }
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Erro: "+response.code(), Toast.LENGTH_LONG).show();                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Usuario>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Erro: "+t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        /*===========================================================*/
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

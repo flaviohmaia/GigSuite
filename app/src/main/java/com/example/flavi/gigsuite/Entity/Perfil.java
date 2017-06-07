@@ -2,6 +2,7 @@ package com.example.flavi.gigsuite.Entity;
 
 import java.io.Serializable;
 
+//// TODO: 06/06/17 Passei os atributos dessa classe para Usuário, só não exclui pq ela ja ta implementada em algumas telas 
 public class Perfil implements Serializable{
 
     private int id;
