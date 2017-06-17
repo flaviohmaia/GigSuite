@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
 
     //Colocar o IP do notebook de vcs
     //Tem que startar o projeto no node e o mongodb
-    private static final String BASE_URL = "http://192.168.1.105:8080/api/";
+    private static final String BASE_URL = "http://gigsuiteapi.esy.es/";
 
     Button btnBuscar;
     Button  btnHistory;
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
 
 
         UsuarioService service = retrofit.create(UsuarioService.class);
-        Call<List<Usuario>> usuarios  = service.getUsuarios();
+        Call<List<Usuario>> usuarios  = service.listarTodosUsuarios();
 
         usuarios.enqueue(new Callback<List<Usuario>>() {
             @Override
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
                 if(response.isSuccessful()){
                     List<Usuario> users = response.body();
                     for(Usuario u : users){
-                        Log.i("USER", u.getUsuario()+" -- "+u.getSenha()+" -- "+u.getEndereco().getCidade());
+                        Log.i("USER", u.getId()+ " -- "+u.getEmail()+" -- "+u.getUsuario()+" -- ");
                         Log.i("USER", "---------------------------");
                     }
 
@@ -103,6 +103,39 @@ public class MainActivity extends AppCompatActivity
         });
 
         /*===========================================================*/
+
+        /*Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+
+        UsuarioService service = retrofit.create(UsuarioService.class);
+        Usuario u = new Usuario();
+        u.setNome("teste retrofit");
+        u.setSenha("123456");
+        Call<Boolean> usuario  = service.inserirUsuario(u);
+
+        usuario.enqueue(new Callback<Boolean>() {
+
+            @Override
+            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+                if(response.isSuccessful()){
+                    if(response.body()){
+                        Toast.makeText(getApplicationContext(), "Inserido com sucesso!", Toast.LENGTH_LONG).show();
+                    } else{
+                        Toast.makeText(getApplicationContext(), "NÃO inserido", Toast.LENGTH_LONG).show();
+                    }
+                } else{
+                    Toast.makeText(getApplicationContext(), "Erro: "+response.code(), Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Boolean> call, Throwable t) {
+
+            }
+        });*/
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

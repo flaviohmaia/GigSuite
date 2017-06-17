@@ -8,8 +8,9 @@ public class Usuario implements Serializable {
     private String email;
     private String usuario;
     private String senha;
-    private String status;
-    private String nome;
+    private boolean status;
+    private Perfil perfil;
+    /*private String nome;
     private String apelido;
     private String categoria;
     private String sub_Categoria;
@@ -17,11 +18,13 @@ public class Usuario implements Serializable {
     private String telefone;
     private String descricao;
     private String site;
-    private Endereco endereco;
+    private Endereco endereco;*/
 
     //CONSTRUTORES
     public Usuario(){
-        this.endereco = new Endereco();
+        //this.endereco = new Endereco();
+        this.perfil = new Perfil();
+
     }
 
     //GETTERS E SETTERS
@@ -57,20 +60,29 @@ public class Usuario implements Serializable {
         this.email = email;
     }
 
-    public Endereco getEndereco() {
+    public Perfil getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(Perfil perfil) {
+        this.perfil = perfil;
+    }
+
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    /*public Endereco getEndereco() {
         return endereco;
     }
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
     public String getNome() {
@@ -135,5 +147,5 @@ public class Usuario implements Serializable {
 
     public void setSite(String site) {
         this.site = site;
-    }
+    }*/
 }
