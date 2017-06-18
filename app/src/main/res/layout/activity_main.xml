@@ -101,11 +101,20 @@
             android:textSize="20dp"/>
 
         <TextView
+            android:id="@+id/tv_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_below="@+id/btnCadastrar"
+            android:text="Cadastre-se!"
+            android:textColor="#fff"
+            android:textAlignment="center" />
+
+        <TextView
             android:id="@+id/tv_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_below="@+id/btnCadastrar"
+            android:layout_below="@+id/text2"
             android:text="Já possui cadastro? Faça seu login clicando aqui!"
             android:textColor="#fff"
             android:textAlignment="center" />

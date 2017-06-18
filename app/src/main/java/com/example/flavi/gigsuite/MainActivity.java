@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity
             implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView tvLogin;
+    TextView tvCadastrar;
     Button btnBuscar;
     Button  btnHistory;
     Spinner spinnerCategoria;
@@ -66,6 +67,15 @@ public class MainActivity extends AppCompatActivity
         etCidade = (EditText) findViewById(R.id.editcidade);
         etUf = (Spinner) findViewById(R.id.editUf);
         tvLogin = (TextView) findViewById(R.id.tv_login);
+        tvCadastrar = (TextView) findViewById(R.id.tv_cadastrar);
+
+        tvCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CadastroUsuarioActivity.class);
+                startActivity(intent);
+            }
+        });
 
         tvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
