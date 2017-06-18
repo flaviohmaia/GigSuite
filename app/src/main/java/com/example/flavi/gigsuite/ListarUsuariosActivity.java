@@ -75,7 +75,7 @@ public class ListarUsuariosActivity extends AppCompatActivity {
 
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                            Intent intent = new Intent(ListarUsuariosActivity.this, EditUsuarioActivity.class);
+                            Intent intent = new Intent(ListarUsuariosActivity.this, EditarUsuarioActivity.class);
                             intent.putExtra("ID", listaUsuarios.get(i).getId());
                             startActivity(intent);
                         }

@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.flavi.gigsuite.EditUsuarioActivity">
+    tools:context="com.example.flavi.gigsuite.EditarUsuarioActivity">
 
     <EditText
         android:layout_width="wrap_content"
@@ -24,31 +24,31 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edtCategoria"
+        android:id="@+id/edtEmail"
         android:layout_below="@+id/edtUsuario"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:hint="Categoria" />
+        android:hint="Email" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtSubCategoriaAno"
-        android:layout_below="@+id/edtCategoria"
+        android:id="@+id/edtStatus"
+        android:layout_below="@+id/edtEmail"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:hint="Sub-Categoria" />
+        android:hint="Status" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Alterar"
-        android:id="@+id/btnEditLivro"
-        android:layout_below="@+id/edtSubCategoriaAno"
+        android:id="@+id/btnEditarUsuario"
+        android:layout_below="@+id/edtStatus"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"/>
 
@@ -56,9 +56,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Remover"
-        android:id="@+id/btnDeleteLivro"
-        android:layout_alignBottom="@+id/btnEditLivro"
-        android:layout_toEndOf="@+id/btnEditLivro"
-        android:layout_toRightOf="@+id/btnEditLivro"/>
+        android:id="@+id/btnRemoverUsuario"
+        android:layout_alignBottom="@+id/btnEditarUsuario"
+        android:layout_toEndOf="@+id/btnEditarUsuario"
+        android:layout_toRightOf="@+id/btnEditarUsuario"/>
 
 </RelativeLayout>
