@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.flavi.gigsuite.Utils.InternetCheck;
+import com.example.flavi.gigsuite.utils.InternetCheck;
 
 
-public class TelaCadastroActivity extends AppCompatActivity {
+public class CadastroPerfilActivity extends AppCompatActivity {
 
     Button btnSave;
 
@@ -23,7 +23,7 @@ public class TelaCadastroActivity extends AppCompatActivity {
 
         /*
             Verifica Conexão Com Internet
-            new InternetCheck(TelaCadastroActivity.this).isInternetConnectionAvailable(new InternetCheck.InternetCheckListener() {
+            new InternetCheck(CadastroPerfilActivity.this).isInternetConnectionAvailable(new InternetCheck.InternetCheckListener() {
                 @Override
                 public void onComplete(boolean connected) {
                     Log.i("Conectado ", "Esta conectado? "+connected);
@@ -34,13 +34,13 @@ public class TelaCadastroActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                new InternetCheck(TelaCadastroActivity.this).isInternetConnectionAvailable(new InternetCheck.InternetCheckListener() {
+                new InternetCheck(CadastroPerfilActivity.this).isInternetConnectionAvailable(new InternetCheck.InternetCheckListener() {
                     @Override
                     public void onComplete(boolean connected) {
                         Log.i("Conectado ", "Esta conectado? "+connected);
                     }
                 });
-                Toast.makeText(TelaCadastroActivity.this, "Tem conexão? ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CadastroPerfilActivity.this, "Tem conexão? ", Toast.LENGTH_SHORT).show();
             }
         });
 

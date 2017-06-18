@@ -1,4 +1,4 @@
-package com.example.flavi.gigsuite.SQLiteHelper;
+package com.example.flavi.gigsuite.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

@@ -6,7 +6,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.flavi.gigsuite.Entity.Perfil;
+import com.example.flavi.gigsuite.fragments.ListDetalheFragment;
+import com.example.flavi.gigsuite.model.Perfil;
 
 public class ConsultaDetalheActivity extends AppCompatActivity {
 

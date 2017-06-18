@@ -1,5 +1,6 @@
 package com.example.flavi.gigsuite;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -7,38 +8,22 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.flavi.gigsuite.DAO.Historico.HistoricoDAO;
-import com.example.flavi.gigsuite.Entity.Historico.Historico;
-import com.example.flavi.gigsuite.Entity.Usuario;
-import com.example.flavi.gigsuite.Entity.UsuarioDeserializer;
-import com.example.flavi.gigsuite.retrofit2.UsuarioService;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import com.example.flavi.gigsuite.dao.HistoricoDAO;
+import com.example.flavi.gigsuite.model.Historico;
 
 public class MainActivity extends AppCompatActivity
             implements NavigationView.OnNavigationItemSelectedListener {
 
-    //Colocar o IP do notebook de vcs
-    //Tem que startar o projeto no node e o mongodb
-    private static final String BASE_URL = "http://gigsuiteapi.esy.es/";
-
+    TextView tvLogin;
     Button btnBuscar;
     Button  btnHistory;
     Spinner spinnerCategoria;
@@ -55,88 +40,18 @@ public class MainActivity extends AppCompatActivity
         historico.setUf(etUf.getSelectedItem().toString());
         historico.setCidade(etCidade.getText().toString());
 
-        Toast.makeText(MainActivity.this, historico.getCategoria(), Toast.LENGTH_SHORT).show();
-
         dao.insert(historico);
     }
-    private void callList(){
-        //TODO: Lucas vai implementar o GET e chamaremos outra pagina mostrando os resultados.
+
+    private void buscarUsuarios(){
+        Intent intent = new Intent(this, ListarUsuariosActivity.class);
+        startActivity(intent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        /*=========================================================*/
-
-        //TODO: FALTA JOGAR ESSA PORRA EM UM LISTVIEW
-        Gson g = new GsonBuilder().registerTypeAdapter(Usuario.class, new UsuarioDeserializer()).create();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(g))
-                .build();
-
-
-        UsuarioService service = retrofit.create(UsuarioService.class);
-        Call<List<Usuario>> usuarios  = service.listarTodosUsuarios();
-
-        usuarios.enqueue(new Callback<List<Usuario>>() {
-            @Override
-            public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
-                if(response.isSuccessful()){
-                    List<Usuario> users = response.body();
-                    for(Usuario u : users){
-                        Log.i("USER", u.getId()+ " -- "+u.getEmail()+" -- "+u.getUsuario()+" -- ");
-                        Log.i("USER", "---------------------------");
-                    }
-
-                } else {
-                    Toast.makeText(getApplicationContext(), "Erro: "+response.code(), Toast.LENGTH_LONG).show();                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Usuario>> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Erro: "+t.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
-
-        /*===========================================================*/
-
-        /*Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-
-        UsuarioService service = retrofit.create(UsuarioService.class);
-        Usuario u = new Usuario();
-        u.setNome("teste retrofit");
-        u.setSenha("123456");
-        Call<Boolean> usuario  = service.inserirUsuario(u);
-
-        usuario.enqueue(new Callback<Boolean>() {
-
-            @Override
-            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
-                if(response.isSuccessful()){
-                    if(response.body()){
-                        Toast.makeText(getApplicationContext(), "Inserido com sucesso!", Toast.LENGTH_LONG).show();
-                    } else{
-                        Toast.makeText(getApplicationContext(), "NÃO inserido", Toast.LENGTH_LONG).show();
-                    }
-                } else{
-                    Toast.makeText(getApplicationContext(), "Erro: "+response.code(), Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Boolean> call, Throwable t) {
-
-            }
-        });*/
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -150,11 +65,20 @@ public class MainActivity extends AppCompatActivity
         spinnerSub_Categoria = (Spinner) findViewById(R.id.editSubCategoria);
         etCidade = (EditText) findViewById(R.id.editcidade);
         etUf = (Spinner) findViewById(R.id.editUf);
+        tvLogin = (TextView) findViewById(R.id.tv_login);
+
+        tvLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnHistory.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(MainActivity.this, HistoryActivity.class);
+                Intent i = new Intent(MainActivity.this, HistoricoActivity.class);
                 startActivity(i);
             }
         });
@@ -163,7 +87,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v){
                 insertHistory();
-                //callList();
+                buscarUsuarios();
             }
         });
 

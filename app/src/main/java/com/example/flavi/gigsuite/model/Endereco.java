@@ -1,4 +1,4 @@
-package com.example.flavi.gigsuite.Entity;
+package com.example.flavi.gigsuite.model;
 
 /**
  * Created by junior on 24/05/17.

@@ -1,4 +1,4 @@
-package com.example.flavi.gigsuite.Entity.Historico;
+package com.example.flavi.gigsuite.model;
 
 /**
  * Created by junior on 27/05/17.

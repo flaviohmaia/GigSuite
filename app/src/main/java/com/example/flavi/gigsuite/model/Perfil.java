@@ -1,16 +1,12 @@
-package com.example.flavi.gigsuite.Entity;
+package com.example.flavi.gigsuite.model;
 
 import java.io.Serializable;
 
-public class Usuario implements Serializable {
+//// TODO: 06/06/17 Passei os atributos dessa classe para Usuário, só não exclui pq ela ja ta implementada em algumas telas 
+public class Perfil implements Serializable{
 
     private int id;
-    private String email;
-    private String usuario;
-    private String senha;
-    private boolean status;
-    private Perfil perfil;
-    /*private String nome;
+    private String nome;
     private String apelido;
     private String categoria;
     private String sub_Categoria;
@@ -18,13 +14,11 @@ public class Usuario implements Serializable {
     private String telefone;
     private String descricao;
     private String site;
-    private Endereco endereco;*/
+    private Endereco endereco;
 
     //CONSTRUTORES
-    public Usuario(){
-        //this.endereco = new Endereco();
-        this.perfil = new Perfil();
-
+    public Perfil(){
+        this.endereco = new Endereco();
     }
 
     //GETTERS E SETTERS
@@ -34,55 +28,6 @@ public class Usuario implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Perfil getPerfil() {
-        return perfil;
-    }
-
-    public void setPerfil(Perfil perfil) {
-        this.perfil = perfil;
-    }
-
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
-    /*public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
 
     public String getNome() {
@@ -147,5 +92,13 @@ public class Usuario implements Serializable {
 
     public void setSite(String site) {
         this.site = site;
-    }*/
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 }

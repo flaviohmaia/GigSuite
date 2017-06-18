@@ -1,12 +1,11 @@
-package com.example.flavi.gigsuite.DAO.Historico;
+package com.example.flavi.gigsuite.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.flavi.gigsuite.Entity.Historico.Historico;
-import com.example.flavi.gigsuite.SQLiteHelper.DatabaseSQLHelper;
+import com.example.flavi.gigsuite.model.Historico;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,22 +1,18 @@
 package com.example.flavi.gigsuite;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.flavi.gigsuite.DAO.Historico.HistoricoDAO;
-import com.example.flavi.gigsuite.Entity.Historico.Historico;
-import com.example.flavi.gigsuite.Utils.HistoricoAdapter;
+import com.example.flavi.gigsuite.dao.HistoricoDAO;
+import com.example.flavi.gigsuite.model.Historico;
+import com.example.flavi.gigsuite.utils.HistoricoAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class HistoryActivity extends AppCompatActivity {
+public class HistoricoActivity extends AppCompatActivity {
 
     List<Historico> historicos;
     HistoricoAdapter adapter;
@@ -36,7 +32,7 @@ public class HistoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
+        setContentView(R.layout.activity_historico);
 
         loadList();
 

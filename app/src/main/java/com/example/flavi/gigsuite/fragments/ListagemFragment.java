@@ -1,4 +1,4 @@
-package com.example.flavi.gigsuite;
+package com.example.flavi.gigsuite.fragments;
 
 
 import android.app.Activity;
@@ -10,7 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.flavi.gigsuite.Entity.Perfil;
+import com.example.flavi.gigsuite.R;
+import com.example.flavi.gigsuite.model.Perfil;
 
 import java.util.ArrayList;
 import java.util.List;

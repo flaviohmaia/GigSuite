@@ -7,7 +7,7 @@
     android:paddingRight="5dp"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
-    tools:context="com.example.flavi.gigsuite.ListagemFragment">
+    tools:context="com.example.flavi.gigsuite.fragments.ListagemFragment">
 
 
     <ListView

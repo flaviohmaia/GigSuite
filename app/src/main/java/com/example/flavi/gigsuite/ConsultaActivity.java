@@ -1,13 +1,12 @@
 package com.example.flavi.gigsuite;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 
-import com.example.flavi.gigsuite.Entity.Perfil;
+import com.example.flavi.gigsuite.fragments.ListagemFragment;
+import com.example.flavi.gigsuite.model.Perfil;
 
 
 public class ConsultaActivity extends AppCompatActivity implements ListagemFragment.AoClicarNoPerfil {

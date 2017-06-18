@@ -1,4 +1,4 @@
-package com.example.flavi.gigsuite;
+package com.example.flavi.gigsuite.fragments;
 
 
 import android.os.Bundle;
@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.flavi.gigsuite.Entity.Perfil;
+import com.example.flavi.gigsuite.R;
+import com.example.flavi.gigsuite.model.Perfil;
 
 
 public class ListDetalheFragment extends Fragment {
