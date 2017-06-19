@@ -17,7 +17,7 @@ public class CadastroPerfilActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_cadastro);
+        setContentView(R.layout.activity_cadastro_perfil);
 
         btnSave = (Button) findViewById(R.id.btnCadastrar);
 

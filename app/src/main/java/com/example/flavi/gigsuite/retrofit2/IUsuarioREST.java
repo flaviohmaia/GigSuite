@@ -26,13 +26,14 @@ public interface IUsuarioREST {
             @Path("uf") String uf,
             @Path("cidade") String cidade,
             @Path("categoria") String categoria,
-            @Path("subcategoria") String subcategoria );
+            @Path("subcategoria") String subcategoria
+    );
 
     @GET("login/{usuario}/{senha}")
     Call<Usuario> login(
             @Path("usuario") String usuario,
-            @Path("senha") String senha );
-
+            @Path("senha") String senha
+    );
 
     @GET("get")
     Call<List<Usuario>> listarTodosUsuarios();

@@ -119,6 +119,13 @@
             android:textColor="#fff"
             android:textAlignment="center" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Onde Estamos"
+            android:onClick="showLocation"
+            android:textColor="#FFF"/>
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">

@@ -1,6 +1,7 @@
 package com.example.flavi.gigsuite;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -49,7 +50,11 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if (dialog.isShowing())
                             dialog.dismiss();
-                        Toast.makeText(getBaseContext(), "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+                        if(response.isSuccessful()) {
+                            Toast.makeText(getBaseContext(), "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(CadastroUsuarioActivity.this, CadastroPerfilActivity.class);
+                            startActivity(intent);
+                        }
                     }
 
                     @Override

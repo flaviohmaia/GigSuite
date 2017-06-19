@@ -54,7 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#E6E6FA"
-        android:id="@+id/editSenha"/>
+        android:id="@+id/editSenha"
+        android:inputType="textPassword"/>
 
     <Button
         android:layout_width="match_parent"

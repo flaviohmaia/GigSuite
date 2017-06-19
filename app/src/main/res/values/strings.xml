@@ -58,7 +58,7 @@
     </string-array>
 
     <string-array name="uf">
-        <item/>
+        <item />
         <item>AC</item>
         <item>AL</item>
         <item>AM</item>
@@ -112,13 +112,14 @@
         <item>Mais Informações</item>
     </string-array>
     <array name="cores_bg">
-        <item> #4c95af</item>
-        <item> #4c95af</item>
-        <item> #4c95af</item>
+        <item>#4c95af</item>
+        <item>#4c95af</item>
+        <item>#4c95af</item>
     </array>
     <array name="cores_texto">
         <item>#4c95af</item>
         <item>#4c95af</item>
         <item>#4c95af</item>
     </array>
+    <string name="title_activity_map">Map</string>
 </resources>

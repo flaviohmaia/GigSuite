@@ -1,6 +1,5 @@
 package com.example.flavi.gigsuite;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,13 +14,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.flavi.gigsuite.dao.HistoricoDAO;
 import com.example.flavi.gigsuite.model.Historico;
-import com.example.flavi.gigsuite.utils.UsuarioAdapter;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
             implements NavigationView.OnNavigationItemSelectedListener {
@@ -174,6 +169,11 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    public void showLocation(View view) {
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
     }
 }
 

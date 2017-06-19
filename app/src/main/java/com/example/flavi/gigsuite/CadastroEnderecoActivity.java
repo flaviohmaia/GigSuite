@@ -8,6 +8,6 @@ public class CadastroEnderecoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_endereco);
+        setContentView(R.layout.activity_cadastro_endereco);
     }
 }
