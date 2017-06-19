@@ -13,6 +13,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
  * Created by lucasnascimento on 17/06/17.
@@ -20,14 +21,24 @@ import retrofit2.http.Path;
 
 public interface IUsuarioREST {
 
+    @GET("get/{uf}/{cidade}/{categoria}/{subcategoria}")
+    Call<List<Usuario>> listarFiltroUsuario(
+            @Path("uf") String uf,
+            @Path("cidade") String cidade,
+            @Path("categoria") String categoria,
+            @Path("subcategoria") String subcategoria );
+
+    @GET("login/{usuario}/{senha}")
+    Call<Usuario> login(
+            @Path("usuario") String usuario,
+            @Path("senha") String senha );
+
+
     @GET("get")
     Call<List<Usuario>> listarTodosUsuarios();
 
     @GET("getid/{id}")
     Call<Usuario> listarUsuarioPorId(@Path("id") String id);
-
-    @GET("login/{usuario}/{senha}")
-    Call<Usuario> login(@Path("usuario, senha") String usuario, String senha);
 
     @POST("usuario/novo")
     Call<Void> inserirUsuario(@Body Usuario usuario);

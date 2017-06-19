@@ -7,8 +7,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Email do usuário"
-        android:id="@+id/txtEmail" />
+        android:text="Nome do usuário"
+        android:id="@+id/txtNomeUsuario" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -28,8 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Status"
-            android:id="@+id/txtStatus"
+            android:text="Sub-categoria"
+            android:id="@+id/txtSubCategoria"
             android:layout_weight="1"
             android:layout_gravity="end"
             android:textAlignment="textEnd" />

@@ -30,21 +30,20 @@
 
 
     <string-array name="categorias">
-        <item>MÚSICO</item>
-        <item>FOTÓGRAFO</item>
+        <item>MUSICO</item>
+        <item>FOTOGRAFO</item>
         <item>CINEGRAFISTA</item>
         <item>ROADIES</item>
-        <item>ATOR/ATRIZ</item>
         <item>PRODUTOR</item>
-        <item>ILUMINAÇÃO</item>
-        <item>SONORIZAÇÃO</item>
+        <item>ILUMINACAO</item>
+        <item>SONORIZACAO</item>
         <item>INGRESSOS</item>
         <item>PALCOS</item>
         <item>OUTROS</item>
     </string-array>
 
     <string-array name="subcategorias">
-        <item>GITARRISTA</item>
+        <item>GUITARRISTA</item>
         <item>VIOLONISTA</item>
         <item>BAIXISTA</item>
         <item>BATERISTA</item>
@@ -52,41 +51,41 @@
         <item>PERCUSSIONISTA</item>
         <item>CANTOR</item>
         <item>CORDAS</item>
-        <item>TÉCNICO DE SOM</item>
+        <item>TECNICO DE SOM</item>
         <item>METAIS E SOPRO</item>
         <item>DJ</item>
         <item>OUTROS</item>
     </string-array>
 
     <string-array name="uf">
-        <item />
-        <item>Acre</item>
-        <item>Alagoas</item>
-        <item>Amazonas</item>
-        <item>Amapá</item>
-        <item>Bahia</item>
-        <item>Ceará</item>
-        <item>Destrito Federal</item>
-        <item>Espirito Santo</item>
-        <item>Goiás</item>
-        <item>Manaus</item>
-        <item>Minas Gerais</item>
-        <item>Mato Grosso do Sul</item>
-        <item>Mato Grosso</item>
-        <item>Pará</item>
-        <item>Paraíba</item>
-        <item>Pernambuco</item>
-        <item>Piauí</item>
-        <item>Paraná</item>
-        <item>Rio de Janeiro</item>
-        <item>Rio Grande do Norte</item>
-        <item>Rondônia</item>
-        <item>Roraima</item>
-        <item>Rio Grande do Sul</item>
-        <item>Santa Catarina</item>
-        <item>Sergipe</item>
-        <item>São Paulo</item>
-        <item>Tocantins</item>
+        <item/>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
     </string-array>
 
     <string name="desc">Faça aqui uma breve descrição sua. Seus equipamentos, principais trabalhos e etc...</string>
@@ -103,4 +102,23 @@
     <string name="txtHistorico">Histórico</string>
     <string name="title_activity_history">Histórico de Busca</string>
     <string name="text_bt_newUsers">Selecionar</string>
+
+    <string name="opcao_aba">Abas</string>
+    <string name="opcao_spinner">Spinner</string>
+    <string name="opcao_pager">View Pager</string>
+    <string-array name="secoes">
+        <item>Contato</item>
+        <item>Localização</item>
+        <item>Mais Informações</item>
+    </string-array>
+    <array name="cores_bg">
+        <item> #4c95af</item>
+        <item> #4c95af</item>
+        <item> #4c95af</item>
+    </array>
+    <array name="cores_texto">
+        <item>#4c95af</item>
+        <item>#4c95af</item>
+        <item>#4c95af</item>
+    </array>
 </resources>

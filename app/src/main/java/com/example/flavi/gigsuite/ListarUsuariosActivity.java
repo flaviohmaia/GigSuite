@@ -35,9 +35,9 @@ public class ListarUsuariosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_musico);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,14 +51,24 @@ public class ListarUsuariosActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        String txt = bundle.getString("txt");
+        String txt1 = bundle.getString("txt1");
+        String txt2 = bundle.getString("txt2");
+        String txt3 = bundle.getString("txt3");
+
         final ListView lista = (ListView) findViewById(R.id.lvMusicos);
+
         IUsuarioREST iUsuarioREST = IUsuarioREST.retrofit.create(IUsuarioREST.class);
         dialog = new ProgressDialog(ListarUsuariosActivity.this);
         dialog.setMessage("Carregando...");
         dialog.setCancelable(false);
         dialog.show();
 
-        final Call<List<Usuario>> call = iUsuarioREST.listarTodosUsuarios();
+        final Call<List<Usuario>> call = iUsuarioREST.listarFiltroUsuario(txt, txt1, txt2, txt3);
 
         call.enqueue(new Callback<List<Usuario>>() {
             @Override
@@ -75,8 +85,8 @@ public class ListarUsuariosActivity extends AppCompatActivity {
 
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                            Intent intent = new Intent(ListarUsuariosActivity.this, EditarUsuarioActivity.class);
-                            intent.putExtra("ID", listaUsuarios.get(i).getId());
+                            Intent intent = new Intent(ListarUsuariosActivity.this, TelaAbasActivity.class);
+                            //intent.putExtra("ID", listaUsuarios.get(i).getId());
                             startActivity(intent);
                         }
                     });

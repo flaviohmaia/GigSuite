@@ -13,7 +13,7 @@ import com.example.flavi.gigsuite.model.Usuario;
 import java.util.List;
 
 /**
- * Created by root on 18/06/17.
+ * Created by lucasnascimento on 18/06/17.
  */
 
 public class UsuarioAdapter extends ArrayAdapter<Usuario> {
@@ -32,15 +32,14 @@ public class UsuarioAdapter extends ArrayAdapter<Usuario> {
 
         View rowView = inflater.inflate(R.layout.linha, parent, false);
 
-        TextView email = (TextView) rowView.findViewById(R.id.txtEmail);
+        TextView nomeUsuario = (TextView) rowView.findViewById(R.id.txtNomeUsuario);
         TextView categoria = (TextView) rowView.findViewById(R.id.txtCategoria);
-        TextView status = (TextView) rowView.findViewById(R.id.txtStatus);
+        TextView subCategoria = (TextView) rowView.findViewById(R.id.txtSubCategoria);
 
 
-        email.setText(elementos.get(position).getEmail());
-        categoria.setText(elementos.get(position).getUsuario());
-        status.setText(Boolean.toString(elementos.get(position).getStatus()));
-
+        nomeUsuario.setText(elementos.get(position).getUsuario());
+        categoria.setText(elementos.get(position).getPerfil().getCategoria());
+        subCategoria.setText(elementos.get(position).getPerfil().getSub_Categoria());
 
         return rowView;
     }

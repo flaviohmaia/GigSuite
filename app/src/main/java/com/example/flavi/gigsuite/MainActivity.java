@@ -19,6 +19,9 @@ import android.widget.Toast;
 
 import com.example.flavi.gigsuite.dao.HistoricoDAO;
 import com.example.flavi.gigsuite.model.Historico;
+import com.example.flavi.gigsuite.utils.UsuarioAdapter;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
             implements NavigationView.OnNavigationItemSelectedListener {
@@ -45,7 +48,21 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void buscarUsuarios(){
-        Intent intent = new Intent(this, ListarUsuariosActivity.class);
+        Intent intent = new Intent(MainActivity.this, ListarUsuariosActivity.class);
+        String txt = etUf.getSelectedItem().toString();
+        String txt1 = etCidade.getText().toString();
+        String txt2 = spinnerCategoria.getSelectedItem().toString();
+        String txt3 = spinnerSub_Categoria.getSelectedItem().toString();
+
+        Bundle bundle = new Bundle();
+
+        bundle.putString("txt", txt);
+        bundle.putString("txt1", txt1);
+        bundle.putString("txt2", txt2);
+        bundle.putString("txt3", txt3);
+
+        intent.putExtras(bundle);
+
         startActivity(intent);
     }
 

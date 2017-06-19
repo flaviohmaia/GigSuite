@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".CadastroPerfilActivity" />
         <activity android:name=".ConsultaActivity" />
         <activity android:name=".CadastroUsuarioActivity" />
@@ -28,7 +29,10 @@
         <activity android:name=".ConsultaDetalheActivity" />
         <activity android:name=".ListarUsuariosActivity" />
         <activity android:name=".EditarUsuarioActivity" />
-        <activity android:name=".HistoricoActivity"></activity>
+        <activity android:name=".TelaAbasActivity" />
+        <activity android:name=".HistoricoActivity">
+
+        </activity>
     </application>
 
 </manifest>
